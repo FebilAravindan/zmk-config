@@ -52,7 +52,7 @@
         nav_layer {
             display-name = "Nav";
             bindings = <MIRYOKU_MAPPING(
-                &none,      &none,      &none,       &none,       &none,         &kp AGAIN,    &kp PASTE,   &kp COPY,    &kp CUT,    &kp UNDO,
+                &none,      &none,      &none,       &none,       &none,         &kp K_AGAIN,  &kp K_PASTE, &kp K_COPY,  &kp K_CUT,  &kp K_UNDO,
                 &kp LGUI,   &kp LALT,   &kp LCTRL,   &kp LSHFT,   &none,         &kp CAPS,     &kp LEFT,    &kp DOWN,    &kp UP,     &kp RIGHT,
                 &none,      &none,      &none,       &none,       &none,         &kp INS,      &kp HOME,    &kp PGDN,    &kp PGUP,   &kp END,
                 &none, &none, &kp ESC,    &kp TAB,     &none,                 &kp BSPC,     &kp RET,     &kp DEL,     &none, &none
@@ -62,7 +62,7 @@
         mouse_layer {
             display-name = "Mouse";
             bindings = <MIRYOKU_MAPPING(
-                &none,      &none,      &none,       &none,       &none,         &kp AGAIN,    &kp PASTE,   &kp COPY,    &kp CUT,    &kp UNDO,
+                &none,      &none,      &none,       &none,       &none,         &kp K_AGAIN,  &kp K_PASTE, &kp K_COPY,  &kp K_CUT,  &kp K_UNDO,
                 &kp LGUI,   &kp LALT,   &kp LCTRL,   &kp LSHFT,   &none,         &none,        &none,       &none,       &none,      &none,
                 &none,      &none,      &none,       &none,       &none,         &none,        &none,       &none,       &none,      &none,
                 &none, &none, &kp ESC,    &none,       &none,                 &none,        &none,       &none,       &none, &none
