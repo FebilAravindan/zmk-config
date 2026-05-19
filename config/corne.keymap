@@ -21,14 +21,6 @@
             bindings = <&mo>, <&kp>;
         };
     };
-
-    macros {
-        u_macro_btn1: u_macro_btn1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp KP_SLASH &kp KP_L>;
-        };
-    };
 };
 
 /* Miryoku 42-key (Corne) Mapping Macro */
@@ -50,70 +42,70 @@
         base_layer {
             display-name = "Base";
             bindings = <MIRYOKU_MAPPING(
-                &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y        &kp U       &kp I       &kp O      &kp P
-                &u_mt LGUI A &u_mt LALT S &u_mt LCTRL D &u_mt LSHFT F &kp G         &kp H        &u_mt LSHFT J &u_mt LCTRL K &u_mt LALT L &u_mt LGUI SEMI
-                &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N        &kp M       &kp COMMA   &kp DOT    &kp FSLH
-                &none &none &u_lt 4 ESC &u_lt 2 TAB &u_lt 1 SPACE             &u_lt 5 BSPC &u_lt 3 RET &u_lt 6 DEL &none &none
+                &kp Q,      &kp W,      &kp E,       &kp R,       &kp T,         &kp Y,        &kp U,       &kp I,       &kp O,      &kp P,
+                &u_mt LGUI A, &u_mt LALT S, &u_mt LCTRL D, &u_mt LSHFT F, &kp G,         &kp H,        &u_mt LSHFT J, &u_mt LCTRL K, &u_mt LALT L, &u_mt LGUI SEMI,
+                &kp Z,      &kp X,      &kp C,       &kp V,       &kp B,         &kp N,        &kp M,       &kp COMMA,   &kp DOT,    &kp FSLH,
+                &none, &none, &u_lt 4 ESC, &u_lt 2 TAB, &u_lt 1 SPACE,             &u_lt 5 BSPC, &u_lt 3 RET, &u_lt 6 DEL, &none, &none
             )>;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <MIRYOKU_MAPPING(
-                &none      &none      &none       &none       &none         &kp AGAIN    &kp PASTE   &kp COPY    &kp CUT    &kp UNDO
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &kp CAPS     &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT
-                &none      &none      &none       &none       &none         &kp INS      &kp HOME    &kp PGDN    &kp PGUP   &kp END
-                &none &none &kp ESC    &kp TAB     &none                 &kp BSPC     &kp RET     &kp DEL     &none &none
+                &none,      &none,      &none,       &none,       &none,         &kp AGAIN,    &kp PASTE,   &kp COPY,    &kp CUT,    &kp UNDO,
+                &kp LGUI,   &kp LALT,   &kp LCTRL,   &kp LSHFT,   &none,         &kp CAPS,     &kp LEFT,    &kp DOWN,    &kp UP,     &kp RIGHT,
+                &none,      &none,      &none,       &none,       &none,         &kp INS,      &kp HOME,    &kp PGDN,    &kp PGUP,   &kp END,
+                &none, &none, &kp ESC,    &kp TAB,     &none,                 &kp BSPC,     &kp RET,     &kp DEL,     &none, &none
             )>;
         };
 
         mouse_layer {
             display-name = "Mouse";
             bindings = <MIRYOKU_MAPPING(
-                &none      &none      &none       &none       &none         &kp AGAIN    &kp PASTE   &kp COPY    &kp CUT    &kp UNDO
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none        &none       &none       &none      &none
-                &none      &none      &none       &none       &none         &none        &none       &none       &none      &none
-                &none &none &kp ESC    &none       &none                 &none        &none       &none       &none &none
+                &none,      &none,      &none,       &none,       &none,         &kp AGAIN,    &kp PASTE,   &kp COPY,    &kp CUT,    &kp UNDO,
+                &kp LGUI,   &kp LALT,   &kp LCTRL,   &kp LSHFT,   &none,         &none,        &none,       &none,       &none,      &none,
+                &none,      &none,      &none,       &none,       &none,         &none,        &none,       &none,       &none,      &none,
+                &none, &none, &kp ESC,    &none,       &none,                 &none,        &none,       &none,       &none, &none
             )>;
         };
 
         media_layer {
             display-name = "Media";
             bindings = <MIRYOKU_MAPPING(
-                &none      &none      &none       &none       &none         &none        &none       &none       &none      &none
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none        &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                &none      &none      &none       &none       &none         &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-                &none &none &none      &none       &none                 &kp C_PP     &kp C_STOP  &kp C_MUTE  &none &none
+                &none,      &none,      &none,       &none,       &none,         &none,        &none,       &none,       &none,      &none,
+                &kp LGUI,   &kp LALT,   &kp LCTRL,   &kp LSHFT,   &none,         &none,        &kp C_PREV,  &kp C_VOL_DN, &kp C_VOL_UP, &kp C_NEXT,
+                &none,      &none,      &none,       &none,       &none,         &out OUT_TOG, &bt BT_SEL 0, &bt BT_SEL 1, &bt BT_SEL 2, &bt BT_SEL 3,
+                &none, &none, &none,      &none,       &none,                 &kp C_PP,     &kp C_STOP,  &kp C_MUTE,  &none, &none
             )>;
         };
 
         num_layer {
             display-name = "Num";
             bindings = <MIRYOKU_MAPPING(
-                &kp LBKT   &kp N7     &kp N8      &kp N9      &kp RBKT      &none        &none       &none       &none      &none
-                &kp SEMI   &kp N4     &kp N5      &kp N6      &kp EQUAL     &none        &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI
-                &kp GRAVE  &kp N1     &kp N2      &kp N3      &kp BSLH      &none        &none       &none       &none      &none
-                &none &none &kp DOT    &kp N0      &kp MINUS             &none        &none       &none       &none &none
+                &kp LBKT,   &kp N7,     &kp N8,      &kp N9,      &kp RBKT,      &none,        &none,       &none,       &none,      &none,
+                &kp SEMI,   &kp N4,     &kp N5,      &kp N6,      &kp EQUAL,     &none,        &kp LSHFT,   &kp LCTRL,   &kp LALT,   &kp LGUI,
+                &kp GRAVE,  &kp N1,     &kp N2,      &kp N3,      &kp BSLH,      &none,        &none,       &none,       &none,      &none,
+                &none, &none, &kp DOT,    &kp N0,      &kp MINUS,             &none,        &none,       &none,       &none, &none
             )>;
         };
 
         sym_layer {
             display-name = "Sym";
             bindings = <MIRYOKU_MAPPING(
-                &kp LBRC   &kp AMPS   &kp ASTRK   &kp LPAR    &kp RBRC      &none        &none       &none       &none      &none
-                &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET   &kp PLUS      &none        &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI
-                &kp TILDE  &kp EXCL   &kp AT      &kp HASH    &kp PIPE      &none        &none       &none       &none      &none
-                &none &none &kp LPAR   &kp RPAR    &kp UNDER             &none        &none       &none       &none &none
+                &kp LBRC,   &kp AMPS,   &kp ASTRK,   &kp LPAR,    &kp RBRC,      &none,        &none,       &none,       &none,      &none,
+                &kp COLON,  &kp DLLR,   &kp PRCNT,   &kp CARET,   &kp PLUS,      &none,        &kp LSHFT,   &kp LCTRL,   &kp LALT,   &kp LGUI,
+                &kp TILDE,  &kp EXCL,   &kp AT,      &kp HASH,    &kp PIPE,      &none,        &none,       &none,       &none,      &none,
+                &none, &none, &kp LPAR,   &kp RPAR,    &kp UNDER,             &none,        &none,       &none,       &none, &none
             )>;
         };
 
         fun_layer {
             display-name = "Fun";
             bindings = <MIRYOKU_MAPPING(
-                &kp F12    &kp F7     &kp F8      &kp F9      &kp PSCRN     &none        &none       &none       &none      &none
-                &kp F11    &kp F4     &kp F5      &kp F6      &kp SLCK      &none        &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI
-                &kp F10    &kp F1     &kp F2      &kp F3      &kp PAUSE_BREAK &none      &none       &none       &none      &none
-                &none &none &kp K_APP  &kp SPACE   &kp TAB               &none        &none       &none       &none &none
+                &kp F12,    &kp F7,     &kp F8,      &kp F9,      &kp PSCRN,     &none,        &none,       &none,       &none,      &none,
+                &kp F11,    &kp F4,     &kp F5,      &kp F6,      &kp SLCK,      &none,        &kp LSHFT,   &kp LCTRL,   &kp LALT,   &kp LGUI,
+                &kp F10,    &kp F1,     &kp F2,      &kp F3,      &kp PAUSE_BREAK, &none,      &none,       &none,       &none,      &none,
+                &none, &none, &kp K_APP,  &kp SPACE,   &kp TAB,               &none,        &none,       &none,       &none, &none
             )>;
         };
     };
